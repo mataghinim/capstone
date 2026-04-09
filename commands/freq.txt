@@ -1,1 +1,16 @@
 
+sorted low → high, not showing any freqs upper than 1800000
+
+	watch -n 0.5 "awk '\$1 <= 1800000' /sys/devices/system/cpu/cpu3/cpufreq/stats/time_in_state | sort -n"
+	
+	watch -n 0.5 "awk '\$1 <= 1800000' /sys/devices/system/cpu/cpufreq/policy0/stats/time_in_state | sort -n"
+	
+	echo 1800000 | sudo tee /sys/devices/system/cpu/cpufreq/policy*/scaling_max_freq
+
+governors
+
+	cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+	
+	for c in /sys/devices/system/cpu/cpu[0-9]*; do
+ 		 echo "$(basename $c): $(cat $c/cpufreq/scaling_governor)"
+	done	
