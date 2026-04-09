@@ -1,0 +1,11 @@
+Create a file
+	dd if=/dev/urandom of=data.bin bs=1M count=512 status=progress
+
+ramfs setup
+	sudo mkdir -p /mnt/ramfs
+	sudo mount -t ramfs -o size=512M ramfs /mnt/ramfs
+	cp data.bin /mnt/ramfs/
+To clean
+	sync
+	echo 3 | sudo tee /proc/sys/vm/drop_caches > /dev/null
+
