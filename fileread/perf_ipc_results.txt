@@ -16,6 +16,20 @@ run,instructions,cycles,ipc
 					avg cycles - 771797029.50
 					avg ipc - 0.114353
 
+run,energy_pkg_joules,energy_ram_joules
+1,10.42,4.96
+2,10.41,4.96
+3,10.45,4.97
+4,10.64,4.97
+5,10.40,4.96
+6,10.36,4.95
+7,10.58,4.95
+8,10.45,4.97
+9,10.38,4.94
+10,11.04,5.01
+					avg pkg_joules - 10.513000
+					avg ram_joules - 4.964000
+
 1000MB - RAMFS
 run,instructions,cycles,ipc
 1,94505950,319023926,0.296235
@@ -31,6 +45,21 @@ run,instructions,cycles,ipc
 					avg instructions - 94295944.50
 					avg cycles - 303032741.60
 					avg ipc - 0.311339
+
+run,energy_pkg_joules,energy_ram_joules
+1,1.32,0.43
+2,1.29,0.42
+3,1.27,0.40
+4,1.28,0.41
+5,1.46,0.41
+6,1.28,0.42
+7,1.30,0.40
+8,1.26,0.40
+9,1.25,0.40
+10,1.52,0.43
+
+					avg pkg_joules - 1.323000
+					avg ram_joules - 0.412000
 -------------------------------------------------------------------------					
 
 2000MB - DISK
