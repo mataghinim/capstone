@@ -1,0 +1,3 @@
+file_reader.c - the file reader we used previously
+custom_reader.c - we specify the amount of bytes we want to read at the end of command, same file_reader logic
+governor_controller.c  - while reading a file, this program in short time intervals detects if the file is read from the disk or pagecache and in case of disk, it changes the governor to “powersafe” 
